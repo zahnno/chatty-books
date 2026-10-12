@@ -1,0 +1,23 @@
+.search-books-skeleton {
+  padding: 24px 16px;
+}
+
+.search-books-skeleton__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-books-skeleton__card {
+  background: var(--card-background);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.search-books-skeleton__cover {
+  width: 100%;
+  border-radius: 8px;
+}

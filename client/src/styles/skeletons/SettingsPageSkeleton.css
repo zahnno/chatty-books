@@ -1,0 +1,27 @@
+.skeleton-settings {
+  min-height: 100vh;
+  padding: 100px 24px 40px;
+  background: var(--background-primary);
+}
+
+.skeleton-settings__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skeleton-settings__profile {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-background);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.skeleton-settings__section {
+  padding: 1.5rem;
+  background: var(--card-background);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}

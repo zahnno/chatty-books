@@ -1,0 +1,78 @@
+diff --git a/node_modules/react-native-iap/android/src/play/java/com/dooboolab/rniap/RNIapModule.kt b/node_modules/react-native-iap/android/src/play/java/com/dooboolab/rniap/RNIapModule.kt
+index 54ca696..3792cd1 100644
+--- a/node_modules/react-native-iap/android/src/play/java/com/dooboolab/rniap/RNIapModule.kt
++++ b/node_modules/react-native-iap/android/src/play/java/com/dooboolab/rniap/RNIapModule.kt
+@@ -13,6 +13,7 @@ import com.android.billingclient.api.ConsumeParams
+ import com.android.billingclient.api.ConsumeResponseListener
+ import com.android.billingclient.api.GetBillingConfigParams
+ import com.android.billingclient.api.GetBillingConfigParams.Builder
++import com.android.billingclient.api.PendingPurchasesParams
+ import com.android.billingclient.api.ProductDetails
+ import com.android.billingclient.api.Purchase
+ import com.android.billingclient.api.PurchaseHistoryRecord
+@@ -42,7 +43,14 @@ import com.google.android.gms.common.GoogleApiAvailability
+ @ReactModule(name = RNIapModule.TAG)
+ class RNIapModule(
+     private val reactContext: ReactApplicationContext,
+-    private val builder: BillingClient.Builder = BillingClient.newBuilder(reactContext).enablePendingPurchases(),
++    private val builder: BillingClient.Builder =
++        BillingClient.newBuilder(reactContext)
++            .enablePendingPurchases(
++                PendingPurchasesParams.newBuilder()
++                    .enableOneTimeProducts()
++                    .enablePrepaidPlans()
++                    .build()
++            ),
+     private val googleApiAvailability: GoogleApiAvailability = GoogleApiAvailability.getInstance(),
+ ) : ReactContextBaseJavaModule(reactContext),
+     PurchasesUpdatedListener {
+@@ -275,9 +283,10 @@ class RNIapModule(
+                     .setProductList(skuList)
+                     .build()
+ 
+-            billingClient.queryProductDetailsAsync(params) { billingResult, skuDetailsList ->
++            billingClient.queryProductDetailsAsync(params) { billingResult, queryProductDetailsResult ->
+                 if (!isValidResult(billingResult, promise)) return@queryProductDetailsAsync
+ 
++                val skuDetailsList = queryProductDetailsResult.productDetailsList ?: emptyList()
+                 val items = Arguments.createArray()
+                 for (skuDetails in skuDetailsList) {
+                     skus[skuDetails.productId] = skuDetails
+@@ -418,21 +427,20 @@ class RNIapModule(
+         ensureConnection(
+             promise,
+         ) { billingClient ->
+-            billingClient.queryPurchaseHistoryAsync(
+-                QueryPurchaseHistoryParams
++            billingClient.queryPurchasesAsync(
++                QueryPurchasesParams
+                     .newBuilder()
+                     .setProductType(
+                         if (type == "subs") BillingClient.ProductType.SUBS else BillingClient.ProductType.INAPP,
+                     ).build(),
+-            ) { billingResult: BillingResult, purchaseHistoryRecordList: MutableList<PurchaseHistoryRecord>? ->
+-
+-                if (!isValidResult(billingResult, promise)) return@queryPurchaseHistoryAsync
++            ) { billingResult: BillingResult, purchasesList: List<Purchase> ->
++                if (!isValidResult(billingResult, promise)) return@queryPurchasesAsync
+ 
+-                Log.d(TAG, purchaseHistoryRecordList.toString())
++                Log.d(TAG, purchasesList.toString())
+                 val items = Arguments.createArray()
+-                purchaseHistoryRecordList?.forEach { purchase ->
++                purchasesList.forEach { purchase ->
+                     val item = Arguments.createMap()
+-                    item.putString("productId", purchase.products[0])
++                    item.putString("productId", purchase.products.firstOrNull() ?: "")
+                     val products = Arguments.createArray()
+                     purchase.products.forEach { products.pushString(it) }
+                     item.putArray("productIds", products)
+@@ -461,7 +469,7 @@ class RNIapModule(
+         isOfferPersonalized: Boolean, // New parameter in V5
+         promise: Promise,
+     ) {
+-        val activity = currentActivity
++        val activity = reactContext.currentActivity
+         if (activity == null) {
+             promise.safeReject(PromiseUtils.E_UNKNOWN, "getCurrentActivity returned null")
+             return

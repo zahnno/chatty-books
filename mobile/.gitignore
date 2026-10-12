@@ -1,0 +1,28 @@
+# Expo / RN
+node_modules/
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+/ios/
+/android/
+
+# Env
+.env
+.env.local
+
+# Misc
+*.log
+.DS_Store
+
+# Signing (Seeker / dApp Store keystore — never commit)
+credentials.json
+credentials/
+*.jks
+*.keystore
+
+# dApp Store build artifacts
+dapp-store/*.apk
+dapp-store/.asset-manifest.json

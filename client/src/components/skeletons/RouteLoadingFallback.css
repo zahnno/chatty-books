@@ -1,0 +1,10 @@
+.route-loading-fallback {
+  min-height: 60vh;
+  padding: 80px 24px 40px;
+  background: var(--background-primary);
+}
+
+.route-loading-fallback__content {
+  max-width: 640px;
+  margin: 0 auto;
+}

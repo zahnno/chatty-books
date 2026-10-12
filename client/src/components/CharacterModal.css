@@ -1,0 +1,264 @@
+.cm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.cm-modal {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-modal.cm-light {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.cm-modal.cm-dark {
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.cm-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 8px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.cm-close:hover {
+  background: var(--hover-background);
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.cm-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.cm-header {
+  position: sticky;
+  top: 0;
+  background: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cm-image-container {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.cm-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cm-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  color: white;
+}
+
+.cm-header-info {
+  flex: 1;
+}
+
+.cm-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.cm-book-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.cm-book-link {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.cm-book-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.cm-details {
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.cm-section {
+  margin-bottom: 24px;
+}
+
+.cm-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.cm-section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cm-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.cm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  background: var(--background-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.cm-tag:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.cm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cm-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.cm-list li svg {
+  color: var(--accent-color);
+}
+
+.cm-actions {
+  padding: 24px;
+  border-top: 1px solid var(--border-color);
+  background: var(--card-background);
+}
+
+.cm-chat-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: var(--ink);
+  color: var(--on-ink);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.cm-chat-button:hover {
+  opacity: 0.86;
+}
+
+@media (max-width: 768px) {
+  .cm-modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .cm-header {
+    padding: 16px;
+  }
+
+  .cm-image-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cm-name {
+    font-size: 1.2rem;
+  }
+
+  .cm-details,
+  .cm-actions {
+    padding: 16px;
+  }
+
+  .cm-section-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

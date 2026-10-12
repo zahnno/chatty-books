@@ -1,0 +1,134 @@
+{
+  "expo": {
+    "name": "Chatty Books",
+    "slug": "talkingbook",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": [
+      "talkingbook",
+      "com.chattybooks.app"
+    ],
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "bundleIdentifier": "com.chattybooks.app",
+      "appleTeamId": "M9SNWQ28C9",
+      "buildNumber": "2",
+      "associatedDomains": [
+        "applinks:talkingbook.app"
+      ],
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.chattybooks.app",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "talkingbook.app"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "monochromeImage": "./assets/images/adaptive-icon-monochrome.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-asset",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 300,
+          "resizeMode": "contain",
+          "backgroundColor": "#FAF8F4",
+          "dark": {
+            "image": "./assets/images/splash-icon-dark.png",
+            "backgroundColor": "#141311"
+          }
+        }
+      ],
+      "./plugins/withLocalhostCleartext",
+      "./plugins/withFmtCxx17",
+      [
+        "react-native-iap",
+        {
+          "paymentProvider": "Play Store"
+        }
+      ],
+      "./plugins/withPlayBilling",
+      "./plugins/withTrimmedPermissions",
+      [
+        "react-native-edge-to-edge",
+        {
+          "android": {
+            "parentTheme": "Default",
+            "enforceNavigationBarContrast": false
+          }
+        }
+      ],
+      "expo-video",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Chatty Books uses your photos to set your profile picture.",
+          "cameraPermission": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Chatty Books uses the microphone so you can talk to characters out loud."
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "Chatty Books uses the microphone so you can talk to characters out loud.",
+          "speechRecognitionPermission": "Chatty Books turns what you say into text so characters can answer you."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "881aacae-cf01-4608-a669-ec9776bb89c4"
+      }
+    },
+    "owner": "zahnno",
+    "icon": "./assets/images/icon.png",
+    "backgroundColor": "#FAF8F4"
+  }
+}

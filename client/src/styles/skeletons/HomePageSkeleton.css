@@ -1,0 +1,209 @@
+.skeleton-home {
+  padding: 0;
+}
+
+.skeleton-home__hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 60px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 90vh;
+}
+
+.skeleton-home__hero-left {
+  min-width: 0;
+}
+
+.skeleton-home__hero-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.skeleton-home__hero-logo {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 16px;
+}
+
+.skeleton-home__hero-app-name {
+  width: 360px !important;
+  height: 64px !important;
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.skeleton-home__hero-title {
+  margin-bottom: 24px;
+}
+
+.skeleton-home__hero-title .skeleton-block:nth-child(1) {
+  height: 64px !important;
+}
+
+.skeleton-home__hero-title .skeleton-block:nth-child(2) {
+  height: 64px !important;
+}
+
+.skeleton-home__hero-subtitle {
+  margin-bottom: 32px;
+}
+
+.skeleton-home__hero-subtitle .skeleton-block {
+  height: 24px !important;
+}
+
+.skeleton-home__hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skeleton-home__hero-cta-primary,
+.skeleton-home__hero-cta-secondary {
+  border-radius: 8px;
+}
+
+.skeleton-home__hero-right {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.skeleton-home__hero-books-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skeleton-home__hero-book {
+  border-radius: 16px;
+}
+
+.skeleton-home__hero-book-1 { grid-row: span 1; }
+.skeleton-home__hero-book-2 { grid-row: span 2; }
+.skeleton-home__hero-book-3 { grid-row: span 1; }
+.skeleton-home__hero-book-4 { grid-row: span 1; }
+.skeleton-home__hero-book-5 { grid-row: span 1; }
+.skeleton-home__hero-book-6 { grid-row: span 2; }
+.skeleton-home__hero-book-7 { grid-row: span 1; }
+.skeleton-home__hero-book-8 { grid-row: span 2; }
+.skeleton-home__hero-book-9 { grid-row: span 1; }
+
+.skeleton-home__section {
+  margin: 2rem 0;
+}
+
+.skeleton-home__book-row {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+
+.skeleton-home__categories {
+  padding: 2rem 20px;
+}
+
+.skeleton-home__category-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .skeleton-home__hero {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    min-height: auto;
+    padding: 30px 16px;
+  }
+
+  .skeleton-home__hero-left {
+    text-align: center;
+  }
+
+  .skeleton-home__hero-logo-row {
+    justify-content: center;
+  }
+
+  .skeleton-home__hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skeleton-home__hero-title .skeleton-block:nth-child(1) {
+    height: 52px !important;
+    width: 100% !important;
+  }
+
+  .skeleton-home__hero-title .skeleton-block:nth-child(2) {
+    height: 52px !important;
+    width: 88% !important;
+  }
+
+  .skeleton-home__hero-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skeleton-home__hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .skeleton-home__hero-cta-primary,
+  .skeleton-home__hero-cta-secondary {
+    width: 100% !important;
+    max-width: 320px;
+  }
+
+  .skeleton-home__hero-right {
+    height: 400px;
+  }
+
+  .skeleton-home__hero-books-grid {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .skeleton-home__hero-logo {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .skeleton-home__hero-app-name {
+    width: 220px !important;
+    height: 38px !important;
+  }
+
+  .skeleton-home__hero-title .skeleton-block:nth-child(1) {
+    height: 40px !important;
+  }
+
+  .skeleton-home__hero-title .skeleton-block:nth-child(2) {
+    height: 40px !important;
+  }
+
+  .skeleton-home__hero-right {
+    height: 350px;
+  }
+
+  .skeleton-home__hero-books-grid {
+    gap: 8px;
+  }
+}

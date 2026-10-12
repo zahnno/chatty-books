@@ -1,0 +1,331 @@
+/* Characters directory */
+
+.characters-header {
+  margin-bottom: 40px;
+}
+
+.characters-search {
+  margin-top: 28px;
+}
+
+/* Books as an editorial index: two columns on wide screens, each entry topped by a
+   hairline rule, a small cover and serif title, then three compact portraits. */
+.characters-books {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 56px;
+  transition: opacity 0.2s ease;
+}
+
+.characters-books.is-refreshing {
+  opacity: 0.5;
+}
+
+.characters-book {
+  min-width: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--separator);
+}
+
+.characters-book-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.characters-book-cover {
+  flex-shrink: 0;
+  display: block;
+  width: 52px;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--surface-strong);
+  box-shadow: var(--shadow-sm), 0 0 0 1px var(--separator);
+}
+
+.characters-book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.characters-book-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.characters-book-title {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.characters-book-title:hover {
+  color: var(--accent);
+}
+
+.characters-book-sub {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.characters-book-arrows {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.characters-book-arrows button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.characters-book-arrows button:hover:not(:disabled) {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.characters-book-arrows button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.characters-book-desc {
+  margin: -4px 0 20px;
+}
+
+.characters-book-desc p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.characters-book-desc p.is-expanded {
+  display: block;
+  overflow: visible;
+}
+
+.characters-book-desc button {
+  margin-top: 4px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.characters-book-desc button:hover {
+  text-decoration: underline;
+}
+
+/* Three portraits in view; the rest scroll or swipe in, snapping per tile. */
+.characters-strip {
+  --tile-gap: 16px;
+  display: flex;
+  gap: var(--tile-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.characters-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.characters-tile {
+  flex: 0 0 calc((100% - 2 * var(--tile-gap)) / 3);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.characters-portrait {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
+}
+
+/* Hairline inner edge so bright art sits on the page instead of popping off it. */
+.characters-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px var(--separator);
+  pointer-events: none;
+}
+
+.characters-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.characters-tile:hover .characters-portrait img {
+  transform: scale(1.03);
+}
+
+.characters-tile:focus-visible {
+  outline: none;
+}
+
+.characters-tile:focus-visible .characters-portrait {
+  box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--accent);
+}
+
+.characters-name {
+  margin-top: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.characters-tile:hover .characters-name {
+  color: var(--accent);
+}
+
+.characters-quote {
+  margin-top: 3px;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.characters-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 16px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.characters-empty h2 {
+  margin: 16px 0 0;
+  color: var(--text-primary);
+  font-size: 24px;
+}
+
+.characters-empty p {
+  margin: 8px 0 24px;
+  color: var(--text-secondary);
+}
+
+.characters-loading {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.characters-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@media (max-width: 960px) {
+  .characters-books {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .characters-book {
+    padding-top: 20px;
+  }
+
+  .characters-book-head {
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .characters-book-cover {
+    width: 44px;
+  }
+
+  .characters-book-desc {
+    margin-bottom: 16px;
+  }
+
+  .characters-book-title {
+    font-size: 17px;
+  }
+
+  /* Touch users swipe. */
+  .characters-book-arrows {
+    display: none;
+  }
+
+  .characters-strip {
+    --tile-gap: 12px;
+  }
+
+  .characters-name {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .characters-quote {
+    display: none;
+  }
+}

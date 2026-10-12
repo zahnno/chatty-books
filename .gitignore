@@ -1,0 +1,11 @@
+node_modules
+server/config.env
+client/build
+client/.env
+client/.env.local
+client/.env.development
+client/.env.production
+server/.DS_Store
+server/credentials/
+server/credentials/*
+server/package-lock.json

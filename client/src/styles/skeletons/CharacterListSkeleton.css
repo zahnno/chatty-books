@@ -1,0 +1,35 @@
+.cl-skeleton {
+  width: 100%;
+}
+
+.cl-skeleton__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.cl-skeleton__card {
+  background: var(--card-background, #fff);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #eaeaea);
+}
+
+.cl-skeleton__card-image {
+  position: relative;
+  padding-top: 100%;
+  overflow: hidden;
+  background: var(--background-secondary, #f5f5f5);
+}
+
+.cl-skeleton__card-content {
+  padding: 1.5rem;
+}
+
+.cl-skeleton .skeleton-text__line {
+  width: 100%;
+}
+
+.cl-skeleton .skeleton-text__line:last-child {
+  width: 75%;
+}

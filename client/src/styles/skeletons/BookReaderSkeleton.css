@@ -1,0 +1,26 @@
+.skeleton-reader {
+  min-height: 100vh;
+  padding: 80px 24px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skeleton-reader__content {
+  background: var(--card-background);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.skeleton-reader__page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skeleton-text .skeleton-text__line {
+  width: 100%;
+}
+
+.skeleton-text .skeleton-text__line:last-child {
+  width: 75%;
+}

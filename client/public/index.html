@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/book-logo-light.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" />
+    <meta name="theme-color" content="#FAF8F4" />
+    <base href="/" />
+    <script>
+      // Shared book links (/b/:id) carry per-book previews from the API; if one
+      // reaches the static site directly, send the reader on to the book.
+      (function () {
+        var m = location.pathname.match(/^\/b\/([a-f0-9]{24})\/?$/i);
+        if (m) location.replace('/#/books/' + m[1]);
+      })();
+    </script>
+    
+    <!-- Primary Meta Tags -->
+    <title>Chatty Books: Read, listen, and talk to the characters</title>
+    <meta name="title" content="Chatty Books: Read, listen, and talk to the characters">
+    <meta name="description" content="Read the classics, listen along with a narrator, and talk with the characters inside them, out loud if you like. Start reading free." />
+    <link rel="canonical" href="https://www.chattybooks.com/" />
+
+    <!-- Open Graph / Facebook, LinkedIn, iMessage, Slack, Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Chatty Books">
+    <meta property="og:url" content="https://www.chattybooks.com/">
+    <meta property="og:title" content="Chatty Books: Read, listen, and talk to the characters">
+    <meta property="og:description" content="Read the classics, listen along with a narrator, and talk with the characters inside them, out loud if you like. Start reading free.">
+    <meta property="og:image" content="https://www.chattybooks.com/social-card.jpg?v=20260927">
+    <meta property="og:image:secure_url" content="https://www.chattybooks.com/social-card.jpg?v=20260927">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Chatty Books: where books turn into conversations. Classic book covers with characters Elizabeth Bennet and the Mad Hatter chatting.">
+    <meta property="og:locale" content="en_US">
+
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.chattybooks.com/">
+    <meta name="twitter:title" content="Chatty Books: Read, listen, and talk to the characters">
+    <meta name="twitter:description" content="Read the classics, listen along with a narrator, and talk with the characters inside them, out loud if you like. Start reading free.">
+    <meta name="twitter:image" content="https://www.chattybooks.com/social-card.jpg?v=20260927">
+    <meta name="twitter:image:alt" content="Chatty Books: where books turn into conversations. Classic book covers with characters Elizabeth Bennet and the Mad Hatter chatting.">
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400&display=swap" rel="stylesheet">
+    
+    <!-- Preload book logo images for loading states -->
+    <link rel="preload" href="%PUBLIC_URL%/book-logo-light.png" as="image">
+    <link rel="preload" href="%PUBLIC_URL%/book-logo-dark.png" as="image">
+    <meta
+      name="chatty-books"
+      content="Chatty Books - Interactive Book Reading Experience"
+    />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
