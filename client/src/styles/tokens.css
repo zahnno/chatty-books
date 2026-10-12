@@ -1,0 +1,115 @@
+/* Design tokens: "ink on paper", shared with the mobile app (mobile/lib/theme.ts).
+   Warm paper, near-black ink and one accent, rubric red. Hierarchy comes from type and
+   spacing rather than gradients and glows. Literata carries titles; Inter the UI.
+   Older variable names are kept as aliases so existing stylesheets follow the theme. */
+
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --paper: #FAF8F4;
+  --surface: #F1EDE5;
+  --surface-strong: #E6E0D4;
+  --raised: #FFFFFF;
+  --ink: #1B1A17;
+  --on-ink: #FAF8F4;
+  --text-muted: #8C877C;
+  --separator: rgba(27, 26, 23, 0.1);
+  --accent: #A33A2B;
+  --accent-hover: #8A2F22;
+  --accent-rgb: 163, 58, 43;
+  --accent-soft: rgba(163, 58, 43, 0.08);
+  --on-accent: #FFFFFF;
+  --overlay: rgba(27, 26, 23, 0.55);
+  --glass: rgba(250, 248, 244, 0.82);
+
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Literata', Georgia, 'Times New Roman', serif;
+
+  --app-header-height: 60px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(27, 26, 23, 0.06);
+  --shadow-md: 0 4px 12px rgba(27, 26, 23, 0.08);
+  --shadow-lg: 0 12px 32px rgba(27, 26, 23, 0.12);
+  --shadow-xl: 0 24px 48px rgba(27, 26, 23, 0.16);
+
+  /* Aliases used across the existing stylesheets */
+  --background-primary: var(--paper);
+  --background-secondary: var(--surface);
+  --background-tertiary: var(--surface-strong);
+  --background-color: var(--paper);
+  --bg-primary: var(--paper);
+  --bg-secondary: var(--surface);
+  --bg-card: var(--raised);
+  --bg-input: var(--surface);
+  --card-background: var(--raised);
+  --input-background: var(--surface);
+  --hover-background: #EDE8DE;
+  --hover-bg: #EDE8DE;
+  --text-primary: var(--ink);
+  --text-secondary: #5E5A52;
+  --text-tertiary: var(--text-muted);
+  --text-color: var(--ink);
+  --border-color: #E5DFD4;
+  --accent-color: var(--accent);
+  --accent-color-hover: var(--accent-hover);
+  --accent-color-rgb: var(--accent-rgb);
+  --accent-color-light: var(--accent-soft);
+  --accent-subtle-background: var(--accent-soft);
+  --accent-subtle-background-hover: rgba(163, 58, 43, 0.14);
+  --primary-color: var(--accent);
+  --nav-background: var(--paper);
+  --nav-text: var(--ink);
+  --header-background: var(--glass);
+  --header-shadow: none;
+  --danger-color: #B42318;
+  --success-color: #2F6B4F;
+  --hero-gradient: var(--paper);
+  --feature-card-bg: var(--raised);
+  --feature-card-border: var(--border-color);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper: #141311;
+  --surface: #1F1D1A;
+  --surface-strong: #2B2824;
+  --raised: #1B1A17;
+  --ink: #EDE6D8;
+  --on-ink: #141311;
+  --text-muted: #7F786C;
+  --separator: rgba(237, 230, 216, 0.1);
+  --accent: #CC5C45;
+  --accent-hover: #D9705A;
+  --accent-rgb: 204, 92, 69;
+  --accent-soft: rgba(204, 92, 69, 0.14);
+  --on-accent: #FFFFFF;
+  --overlay: rgba(0, 0, 0, 0.6);
+  --glass: rgba(20, 19, 17, 0.8);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.55);
+
+  --hover-background: #262420;
+  --hover-bg: #262420;
+  --text-secondary: #B3AA9A;
+  --border-color: #2E2B27;
+  --accent-subtle-background-hover: rgba(204, 92, 69, 0.22);
+  --danger-color: #F07B6E;
+  --success-color: #7BC4A0;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --app-header-height: 56px;
+  }
+}

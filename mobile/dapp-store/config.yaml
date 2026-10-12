@@ -1,0 +1,72 @@
+# Solana dApp Store publishing config (Seeker).
+# Used by `npx @solana-mobile/dapp-store-cli` — see ../README.md "Seeker (Solana dApp Store)".
+# Fill in the TODOs; the CLI writes the minted NFT addresses back into this file.
+publisher:
+  name: Hayden Bulk Tech Labs Inc.
+  website: https://www.chattybooks.com
+  email: support@chattybooks.com
+  media:
+    - purpose: icon
+      uri: ./media/publisher-icon.png # 512x512
+app:
+  name: Chatty Books
+  address: ""
+  android_package: com.chattybooks.app
+  urls:
+    license_url: https://www.chattybooks.com/terms
+    copyright_url: https://www.chattybooks.com/terms
+    privacy_policy_url: https://www.chattybooks.com/privacy
+    website: https://www.chattybooks.com
+  media:
+    - purpose: icon
+      uri: ./media/app-icon.png # 512x512
+release:
+  address: ""
+  media:
+    - purpose: icon
+      uri: ./media/app-icon.png
+    - purpose: banner
+      uri: ./media/banner.png # 1200x600
+    - purpose: screenshot
+      uri: ./media/screenshot-1.png # >= 1080px, 4+ required
+  files:
+    - purpose: install
+      uri: ./talkingbook-seeker.apk # the APK from `npm run build:seeker`
+  catalog:
+    en-US:
+      name: Chatty Books
+      short_description: Read, listen to, and chat with the characters of your books.
+      long_description: >
+        Chatty Books turns books into interactive experiences: read with synced
+        audiobook narration and chat with the characters as you go. Sign in with
+        your Solana wallet and buy 30-day plan passes with USDC, SOL or SKR.
+
+
+        Permissions: Microphone (optional) lets you talk to characters out loud
+        instead of typing. It is requested only when you tap Talk in a chat, after
+        an in-app explanation, and is used only until you send or cancel. Internet
+        is used to load books and reach characters; audio playback runs in the
+        background so narration keeps playing with the screen off.
+
+
+        Privacy Policy: https://www.chattybooks.com/privacy
+
+        Terms of Use: https://www.chattybooks.com/terms
+      new_in_version: |
+        Chatty Books for Seeker is here.
+        - Read books with synced audiobook narration that keeps playing when your screen is off.
+        - Chat with the characters, by typing or out loud.
+        - Sign in with your Solana wallet, and get a bonus if you hold a Seeker Genesis Token.
+        - Buy 30-day plan passes with USDC, SOL or SKR. They don't auto-renew.
+
+        Privacy: the app asks for your microphone only when you tap Talk, and explains why first. We've also removed permissions the app doesn't need.
+      saga_features: ""
+solana_mobile_dapp_publisher_portal:
+  google_store_package: com.chattybooks.app
+  testing_instructions: >
+    Sign in with email or a Solana wallet. Open any book from Home, tap Listen
+    to start narration, and tap Characters to chat. To test the microphone, open
+    a character chat and tap Talk: an explanation appears before the system
+    permission dialog. Privacy Policy and Terms of Use are linked from Settings
+    and from the plan screen, and live at https://www.chattybooks.com/privacy and
+    https://www.chattybooks.com/terms.

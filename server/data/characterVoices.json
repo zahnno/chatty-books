@@ -1,0 +1,1070 @@
+{
+  "_source": "Privateer's TTS voice catalogue and profiles (privateer.pro app, 2026-09-25), English voices on engines fast enough for live chat. Verify with scripts/verifyCharacterVoices.js.",
+  "voices": [
+    {
+      "id": "Alice",
+      "name": "Alice",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "clear",
+        "engaging"
+      ],
+      "bestFor": [
+        "e-learning"
+      ]
+    },
+    {
+      "id": "Bill",
+      "name": "Bill",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "mature",
+      "accent": "american",
+      "traits": [
+        "friendly",
+        "comforting"
+      ],
+      "bestFor": [
+        "advertising"
+      ]
+    },
+    {
+      "id": "Brian",
+      "name": "Brian",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "resonant",
+        "comforting",
+        "deep"
+      ],
+      "bestFor": [
+        "narration"
+      ]
+    },
+    {
+      "id": "Callum",
+      "name": "Callum",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "transatlantic",
+      "traits": [
+        "gravelly",
+        "intense"
+      ],
+      "bestFor": [
+        "characters"
+      ]
+    },
+    {
+      "id": "Charlie",
+      "name": "Charlie",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "young",
+      "accent": "australian",
+      "traits": [
+        "confident",
+        "energetic",
+        "natural"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "Charlotte",
+      "name": "Charlotte",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "young",
+      "accent": "swedish",
+      "traits": [
+        "sensual",
+        "raspy"
+      ],
+      "bestFor": [
+        "characters"
+      ]
+    },
+    {
+      "id": "Chris",
+      "name": "Chris",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "natural",
+        "down to earth"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "Daniel",
+      "name": "Daniel",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "authoritative",
+        "clear"
+      ],
+      "bestFor": [
+        "news"
+      ]
+    },
+    {
+      "id": "Eric",
+      "name": "Eric",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "smooth"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "George",
+      "name": "George",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "calm",
+        "resonant",
+        "warm"
+      ],
+      "bestFor": [
+        "audiobook",
+        "narration"
+      ]
+    },
+    {
+      "id": "Jessica",
+      "name": "Jessica",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "playful",
+        "expressive"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "Laura",
+      "name": "Laura",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "sunny",
+        "quirky",
+        "upbeat"
+      ],
+      "bestFor": [
+        "social media"
+      ]
+    },
+    {
+      "id": "Liam",
+      "name": "Liam",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "warm",
+        "energetic"
+      ],
+      "bestFor": [
+        "social media"
+      ]
+    },
+    {
+      "id": "Lily",
+      "name": "Lily",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "velvety",
+        "warm"
+      ],
+      "bestFor": [
+        "narration",
+        "news"
+      ]
+    },
+    {
+      "id": "Matilda",
+      "name": "Matilda",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "professional",
+        "warm"
+      ],
+      "bestFor": [
+        "narration"
+      ]
+    },
+    {
+      "id": "Rachel",
+      "name": "Rachel",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "calm"
+      ],
+      "bestFor": [
+        "narration"
+      ]
+    },
+    {
+      "id": "River",
+      "name": "River",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "neutral",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "relaxed"
+      ],
+      "bestFor": [
+        "narration",
+        "casual chat"
+      ]
+    },
+    {
+      "id": "Sarah",
+      "name": "Sarah",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "confident",
+        "warm",
+        "professional"
+      ],
+      "bestFor": [
+        "news"
+      ]
+    },
+    {
+      "id": "Will",
+      "name": "Will",
+      "engine": "elevenlabs",
+      "model": "fal-ai/elevenlabs/tts/turbo-v2.5",
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "friendly"
+      ],
+      "bestFor": [
+        "social media"
+      ]
+    },
+    {
+      "id": "aura-2-amalthea-en",
+      "name": "Amalthea",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "young",
+      "accent": "filipino",
+      "traits": [
+        "engaging",
+        "natural",
+        "cheerful"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "aura-2-andromeda-en",
+      "name": "Andromeda",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "casual",
+        "expressive",
+        "comfortable"
+      ],
+      "bestFor": [
+        "customer service",
+        "ivr"
+      ]
+    },
+    {
+      "id": "aura-2-apollo-en",
+      "name": "Apollo",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "confident",
+        "comfortable",
+        "casual"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "aura-2-arcas-en",
+      "name": "Arcas",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "natural",
+        "smooth",
+        "clear",
+        "comfortable"
+      ],
+      "bestFor": [
+        "customer service",
+        "casual chat"
+      ]
+    },
+    {
+      "id": "aura-2-aries-en",
+      "name": "Aries",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "warm",
+        "energetic",
+        "caring"
+      ],
+      "bestFor": [
+        "casual chat"
+      ]
+    },
+    {
+      "id": "aura-2-asteria-en",
+      "name": "Asteria",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "clear",
+        "confident",
+        "knowledgeable",
+        "energetic"
+      ],
+      "bestFor": [
+        "advertising"
+      ]
+    },
+    {
+      "id": "aura-2-athena-en",
+      "name": "Athena",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "mature",
+      "accent": "american",
+      "traits": [
+        "calm",
+        "smooth",
+        "professional"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-atlas-en",
+      "name": "Atlas",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "mature",
+      "accent": "american",
+      "traits": [
+        "enthusiastic",
+        "confident",
+        "approachable",
+        "friendly"
+      ],
+      "bestFor": [
+        "advertising"
+      ]
+    },
+    {
+      "id": "aura-2-aurora-en",
+      "name": "Aurora",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "cheerful",
+        "expressive",
+        "energetic"
+      ],
+      "bestFor": [
+        "interview"
+      ]
+    },
+    {
+      "id": "aura-2-callista-en",
+      "name": "Callista",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "clear",
+        "energetic",
+        "professional",
+        "smooth"
+      ],
+      "bestFor": [
+        "ivr"
+      ]
+    },
+    {
+      "id": "aura-2-cora-en",
+      "name": "Cora",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "smooth",
+        "melodic",
+        "caring"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-cordelia-en",
+      "name": "Cordelia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "approachable",
+        "warm",
+        "polite"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-delia-en",
+      "name": "Delia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "casual",
+        "friendly",
+        "cheerful",
+        "breathy"
+      ],
+      "bestFor": [
+        "interview"
+      ]
+    },
+    {
+      "id": "aura-2-draco-en",
+      "name": "Draco",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "warm",
+        "approachable",
+        "trustworthy",
+        "baritone"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-electra-en",
+      "name": "Electra",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "professional",
+        "engaging",
+        "knowledgeable"
+      ],
+      "bestFor": [
+        "ivr",
+        "advertising",
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-harmonia-en",
+      "name": "Harmonia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "empathetic",
+        "clear",
+        "calm",
+        "confident"
+      ],
+      "bestFor": [
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-helena-en",
+      "name": "Helena",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "caring",
+        "natural",
+        "positive",
+        "friendly",
+        "raspy"
+      ],
+      "bestFor": [
+        "ivr",
+        "casual chat"
+      ]
+    },
+    {
+      "id": "aura-2-hera-en",
+      "name": "Hera",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "smooth",
+        "warm",
+        "professional"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-hermes-en",
+      "name": "Hermes",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "expressive",
+        "engaging",
+        "professional"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-hyperion-en",
+      "name": "Hyperion",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "australian",
+      "traits": [
+        "caring",
+        "warm",
+        "empathetic"
+      ],
+      "bestFor": [
+        "interview"
+      ]
+    },
+    {
+      "id": "aura-2-iris-en",
+      "name": "Iris",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "cheerful",
+        "positive",
+        "approachable"
+      ],
+      "bestFor": [
+        "ivr",
+        "advertising",
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-janus-en",
+      "name": "Janus",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "southern",
+        "smooth",
+        "trustworthy"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-juno-en",
+      "name": "Juno",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "natural",
+        "engaging",
+        "melodic",
+        "breathy"
+      ],
+      "bestFor": [
+        "interview"
+      ]
+    },
+    {
+      "id": "aura-2-jupiter-en",
+      "name": "Jupiter",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "expressive",
+        "knowledgeable",
+        "baritone"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-luna-en",
+      "name": "Luna",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "traits": [
+        "friendly",
+        "natural",
+        "engaging"
+      ],
+      "bestFor": [
+        "ivr"
+      ]
+    },
+    {
+      "id": "aura-2-mars-en",
+      "name": "Mars",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "smooth",
+        "patient",
+        "trustworthy",
+        "baritone"
+      ],
+      "bestFor": [
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-minerva-en",
+      "name": "Minerva",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "positive",
+        "friendly",
+        "natural"
+      ],
+      "bestFor": [
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-neptune-en",
+      "name": "Neptune",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "professional",
+        "patient",
+        "polite"
+      ],
+      "bestFor": [
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-odysseus-en",
+      "name": "Odysseus",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "calm",
+        "smooth",
+        "comfortable",
+        "professional"
+      ],
+      "bestFor": [
+        "advertising"
+      ]
+    },
+    {
+      "id": "aura-2-ophelia-en",
+      "name": "Ophelia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "expressive",
+        "enthusiastic",
+        "cheerful"
+      ],
+      "bestFor": [
+        "interview"
+      ]
+    },
+    {
+      "id": "aura-2-orion-en",
+      "name": "Orion",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "approachable",
+        "comfortable",
+        "calm",
+        "polite"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-orpheus-en",
+      "name": "Orpheus",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "professional",
+        "clear",
+        "confident",
+        "trustworthy"
+      ],
+      "bestFor": [
+        "customer service",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-pandora-en",
+      "name": "Pandora",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "british",
+      "traits": [
+        "smooth",
+        "calm",
+        "melodic",
+        "breathy"
+      ],
+      "bestFor": [
+        "ivr",
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-phoebe-en",
+      "name": "Phoebe",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "energetic",
+        "warm",
+        "casual"
+      ],
+      "bestFor": [
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-pluto-en",
+      "name": "Pluto",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "smooth",
+        "calm",
+        "empathetic",
+        "baritone"
+      ],
+      "bestFor": [
+        "interview",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-saturn-en",
+      "name": "Saturn",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "knowledgeable",
+        "confident",
+        "baritone"
+      ],
+      "bestFor": [
+        "customer service"
+      ]
+    },
+    {
+      "id": "aura-2-selene-en",
+      "name": "Selene",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "expressive",
+        "engaging",
+        "energetic"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-thalia-en",
+      "name": "Thalia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "clear",
+        "confident",
+        "energetic",
+        "enthusiastic"
+      ],
+      "bestFor": [
+        "casual chat",
+        "customer service",
+        "ivr"
+      ]
+    },
+    {
+      "id": "aura-2-theia-en",
+      "name": "Theia",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "australian",
+      "traits": [
+        "expressive",
+        "polite",
+        "sincere"
+      ],
+      "bestFor": [
+        "informative"
+      ]
+    },
+    {
+      "id": "aura-2-vesta-en",
+      "name": "Vesta",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "female",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "natural",
+        "expressive",
+        "patient",
+        "empathetic"
+      ],
+      "bestFor": [
+        "customer service",
+        "interview",
+        "storytelling"
+      ]
+    },
+    {
+      "id": "aura-2-zeus-en",
+      "name": "Zeus",
+      "engine": "deepgram",
+      "model": "deepgram/aura-2",
+      "gender": "male",
+      "age": "adult",
+      "accent": "american",
+      "traits": [
+        "deep",
+        "trustworthy",
+        "smooth"
+      ],
+      "bestFor": [
+        "ivr"
+      ]
+    },
+    {
+      "id": "aiden",
+      "name": "Aiden",
+      "engine": "qwen",
+      "model": "tinfoil/qwen3-tts",
+      "gender": "male",
+      "age": null,
+      "accent": "american",
+      "traits": [
+        "sunny",
+        "clear"
+      ],
+      "bestFor": []
+    },
+    {
+      "id": "ryan",
+      "name": "Ryan",
+      "engine": "qwen",
+      "model": "tinfoil/qwen3-tts",
+      "gender": "male",
+      "age": null,
+      "accent": null,
+      "traits": [
+        "dynamic",
+        "rhythmic"
+      ],
+      "bestFor": []
+    }
+  ]
+}

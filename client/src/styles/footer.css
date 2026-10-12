@@ -1,0 +1,107 @@
+/* Full-height shell so the footer is pushed to the bottom even on short pages */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  background: var(--background-primary);
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 24px 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.footer-wordmark img {
+  height: 26px;
+  width: auto;
+}
+
+.footer-wordmark span {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-brand p {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 72px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column h3 {
+  margin: 0 0 4px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.footer-column a {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-column a:hover {
+  color: var(--text-primary);
+}
+
+.footer-legal {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px 24px 28px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 16px 28px;
+  }
+
+  .footer-columns {
+    gap: 40px;
+  }
+
+  .footer-legal {
+    padding: 16px 16px 24px;
+  }
+}

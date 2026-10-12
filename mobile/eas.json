@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": ">= 12.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_SERVER_URI": "http://localhost:5001"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_SERVER_URI": "https://talkingbook.onrender.com",
+        "EXPO_PUBLIC_WEB_URL": "https://www.chattybooks.com"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_SERVER_URI": "https://talkingbook.onrender.com",
+        "EXPO_PUBLIC_WEB_URL": "https://www.chattybooks.com",
+        "EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID": "10567536307-okn7jvkb1cf0n7bah7h6ad4urmh0fe3r.apps.googleusercontent.com"
+      }
+    },
+    "seeker": {
+      "extends": "production",
+      "android": {
+        "buildType": "apk",
+        "credentialsSource": "local"
+      },
+      "env": {
+        "EXPO_PUBLIC_SERVER_URI": "https://talkingbook.onrender.com",
+        "EXPO_PUBLIC_WEB_URL": "https://www.chattybooks.com",
+        "EXPO_PUBLIC_BILLING_MODE": "dappstore"
+      }
+    },
+    "ios-simulator": {
+      "extends": "preview",
+      "ios": {
+        "simulator": true
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

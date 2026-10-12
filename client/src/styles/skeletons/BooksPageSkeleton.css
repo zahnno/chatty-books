@@ -1,0 +1,26 @@
+.skeleton-books {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.skeleton-books__hero {
+  margin-bottom: 2rem;
+  padding-top: 60px;
+}
+
+.skeleton-books__section {
+  margin: 2rem 0;
+}
+
+.skeleton-books__row {
+  display: flex;
+  gap: 1.5rem;
+  overflow: hidden;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+}
+
+.skeleton-books__library-header {
+  padding: 0 20px 1rem;
+  max-width: 600px;
+}

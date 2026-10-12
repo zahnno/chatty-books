@@ -1,0 +1,89 @@
+/* About, Help, Privacy and Terms: a single readable column */
+
+.static-page {
+  width: 100%;
+  padding: 56px 24px 96px;
+  box-sizing: border-box;
+}
+
+.static-page-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.static-page h1 {
+  margin: 0 0 40px;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.static-page section {
+  padding: 28px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.static-page h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.static-page h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.static-page p,
+.static-page li {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.static-page p {
+  margin: 0 0 12px;
+}
+
+.static-page p:last-child {
+  margin-bottom: 0;
+}
+
+.static-page ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.static-page li + li {
+  margin-top: 4px;
+}
+
+.static-page a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.static-page .last-updated {
+  margin: -28px 0 32px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.faq-item + .faq-item {
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .static-page {
+    padding: 36px 16px 72px;
+  }
+}

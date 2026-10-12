@@ -1,0 +1,349 @@
+/* =========================================================
+   Global Audiobook Player: fixed mini bar at bottom
+   ========================================================= */
+
+.audiobook-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--background-primary);
+  border-top: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md, 0 -4px 20px rgba(0, 0, 0, 0.12));
+  font-family: inherit;
+}
+
+/* ── Mini Bar ── */
+.player-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 16px;
+}
+
+/* Left */
+.player-mini-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.player-mini-cover {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.player-mini-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.player-mini-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-mini-voice {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-mini-page {
+  font-size: 11px;
+  color: var(--text-secondary);
+  opacity: 0.75;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.player-mini-page:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* Center: seek */
+.player-mini-seek-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.player-seek-bar {
+  position: relative;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.player-mini-seek {
+  width: 100%;
+}
+
+.player-seek-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+.player-mini-timestamps {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Right: controls */
+.player-mini-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* ── Shared icon button ── */
+.player-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.player-icon-btn:hover:not(:disabled) {
+  background: var(--card-background, rgba(0, 0, 0, 0.06));
+}
+
+.player-icon-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.player-play-btn {
+  background: var(--accent-color);
+  color: #fff;
+  width: 38px;
+  height: 38px;
+}
+
+.player-play-btn:hover:not(:disabled) {
+  background: var(--accent-color-hover, var(--accent-color));
+}
+
+.player-close-btn {
+  color: var(--text-secondary);
+  margin-left: 4px;
+}
+
+.player-close-btn:hover {
+  color: var(--text-primary);
+}
+
+/* ── Voice dropdown ── */
+.player-voice-dropdown {
+  position: relative;
+  margin-right: 32px;
+}
+
+.player-voice-trigger {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+  max-width: 180px;
+}
+
+.player-voice-trigger:hover:not(:disabled) {
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+}
+
+.player-voice-trigger.open {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.player-voice-trigger:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.player-voice-trigger > span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-voice-trigger-chevron {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.player-voice-trigger-chevron.open {
+  transform: rotate(180deg);
+}
+
+.player-voice-menu {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  min-width: 200px;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.player-voice-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.12s;
+  text-align: left;
+}
+
+.player-voice-option:last-child {
+  border-bottom: none;
+}
+
+.player-voice-option:hover {
+  background: color-mix(in srgb, var(--accent-color) 8%, transparent);
+}
+
+.player-voice-option.active {
+  color: var(--accent-color);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--accent-color) 10%, transparent);
+}
+
+.player-voice-option-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-color);
+  flex-shrink: 0;
+}
+
+.player-voice-option.active .player-voice-option-dot {
+  background: var(--accent-color);
+}
+
+.player-voice-option > span:nth-child(2) {
+  flex: 1;
+}
+
+.player-loading,
+.player-no-audio {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ── Responsive ── */
+
+/* Tablets: hide voice subtitle, less margin */
+@media (max-width: 768px) {
+  .player-mini-voice {
+    display: none;
+  }
+
+  .player-mini-page {
+    display: none;
+  }
+
+  .player-voice-dropdown {
+    margin-right: 16px;
+  }
+
+  .player-voice-trigger {
+    max-width: 140px;
+  }
+}
+
+/* Large phones: hide timestamps, icon-only voice trigger */
+@media (max-width: 640px) {
+  .player-mini-timestamps {
+    display: none;
+  }
+
+  .player-voice-trigger > span {
+    display: none;
+  }
+
+  .player-voice-trigger {
+    max-width: unset;
+    padding: 6px 8px;
+  }
+
+  .player-voice-dropdown {
+    margin-right: 8px;
+  }
+}
+
+/* Small phones: hide seek entirely, tighten layout */
+@media (max-width: 480px) {
+  .player-mini {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .player-mini-seek-group {
+    display: none;
+  }
+
+  .player-mini-title {
+    font-size: 13px;
+  }
+
+  .player-play-btn {
+    width: 34px;
+    height: 34px;
+  }
+}

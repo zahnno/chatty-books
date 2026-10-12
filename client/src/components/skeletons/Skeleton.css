@@ -1,0 +1,54 @@
+/* Skeleton components - use CSS variables for theme */
+.skeleton-block {
+  background: linear-gradient(
+    90deg,
+    var(--background-secondary) 0%,
+    var(--hover-background) 50%,
+    var(--background-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.2s ease-in-out infinite;
+  border-radius: 6px;
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-card {
+  flex-shrink: 0;
+  width: 140px;
+}
+
+.skeleton-card__cover {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+}
+
+.skeleton-card__line {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.skeleton-card__line--short {
+  width: 60%;
+}
+
+.skeleton-text__line {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.skeleton-text__line:first-child {
+  margin-top: 0;
+}

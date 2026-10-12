@@ -1,0 +1,14 @@
+---
+description: 
+alwaysApply: true
+---
+
+This is a client side react application, backend server is node express with a mongoose db (mongodb)
+
+There is documentation in regards to the backend server side logic [cursor_routing.md](mdc:server/cursor_routing.md) however you can reference [query.js](mdc:server/routes/query.js) for most of the express routes. 
+
+The purpose of the application is to provide users the ability to read books and chat with characters
+[chatService.js](mdc:server/services/chatService.js) is the main logic for chatting
+[generationService.js](mdc:server/services/generationService.js) is our main service for AI generation using the Privateer API
+[auth.js](mdc:server/controllers/auth.js) & [auth.js](mdc:server/controllers/auth.js) contain most of our authorization and authentication logic
+When creating or updating server routes, update the [cursor_routing.md](mdc:server/cursor_routing.md) file

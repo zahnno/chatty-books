@@ -1,0 +1,58 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.18.0 <19.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "optimize-images": "node scripts/optimizeExistingImages.js",
+    "optimize-images:dry-run": "node scripts/optimizeExistingImages.js --dry-run",
+    "optimize-images:test": "node scripts/optimizeExistingImages.js --dry-run --max-images=5",
+    "fix-images": "node scripts/fixBrokenImageUrls.js",
+    "fix-images:dry-run": "node scripts/fixBrokenImageUrls.js --dry-run",
+    "fix-image-generations": "node scripts/fixImageGenerationUrls.js",
+    "fix-image-generations:dry-run": "node scripts/fixImageGenerationUrls.js --dry-run",
+    "fix-image-generations:clean": "node scripts/fixImageGenerationUrls.js --clean-failed --clean-stale",
+    "fix-gallery-images": "node scripts/fixGalleryImageUrls.js",
+    "fix-gallery-images:dry-run": "node scripts/fixGalleryImageUrls.js --dry-run"
+  },
+  "dependencies": {
+    "@apple/app-store-server-library": "^3.1.0",
+    "@aws-sdk/client-ses": "^3.758.0",
+    "@google-cloud/text-to-speech": "^5.8.0",
+    "@googleapis/androidpublisher": "^38.0.0",
+    "aws-sdk": "^2.1642.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "epub": "^1.3.0",
+    "express": "^4.18.2",
+    "express-session": "^1.18.1",
+    "getimg-client": "^1.0.1",
+    "google-auth-library": "^9.15.1",
+    "jsdom": "^26.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.4.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^2.10.0",
+    "node-cron": "^3.0.3",
+    "opentype.js": "^1.3.4",
+    "passport": "^0.7.0",
+    "passport-auth0": "^1.4.4",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pdf-parse": "^1.1.1",
+    "sharp": "^0.33.5",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@talkingbook/shared",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Platform-agnostic core (API client, auth/token contexts, types) shared by the web client and the Expo mobile app.",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@tanstack/react-query": ">=5",
+    "react": ">=18"
+  }
+}

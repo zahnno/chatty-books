@@ -1,0 +1,159 @@
+.book-request-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.book-request-modal-content {
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  min-width: 340px;
+  max-width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-request-modal-content.dark {
+  background: #23232b;
+  color: #e2e8f0;
+}
+
+.book-request-modal-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.book-request-modal-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.book-request-modal-content.dark .book-request-modal-subtitle {
+  color: #a0aec0;
+}
+
+.book-request-form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-request-form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.book-request-form-group input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  color: #222;
+}
+
+.book-request-modal-content.dark .book-request-form-group input {
+  background: #18181c;
+  color: #e2e8f0;
+  border: 1px solid #444;
+}
+
+.book-request-error-message {
+  background: #ffeaea;
+  color: #c0392b;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.book-request-success-message {
+  background: #eaffea;
+  color: #27ae60;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.book-request-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.book-request-cancel-button {
+  background: none;
+  border: 1px solid #aaa;
+  color: #444;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.book-request-cancel-button:hover {
+  background: #f0f0f0;
+}
+
+.book-request-modal-content.dark .book-request-cancel-button {
+  border: 1px solid #666;
+  color: #e2e8f0;
+  background: none;
+}
+
+.book-request-modal-content.dark .book-request-cancel-button:hover {
+  background: #23232b;
+}
+
+.book-request-submit-button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.book-request-submit-button:hover {
+  background: var(--accent-color-hover);
+}
+
+.book-request-modal-content.dark .book-request-submit-button {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.book-request-modal-content.dark .book-request-submit-button:hover {
+  background: var(--accent-color-hover);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Remove or comment out old generic modal styles if present */
+/* .modal-overlay, .modal-content, .modal-header, .modal-footer, .form-group, .error-message, .success-message, .cancel-button, .submit-button { display: none !important; } */ 
